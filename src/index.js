@@ -4,7 +4,7 @@ const onClickAdd = () => {
   // テキストの値を取得し、文字を初期化する
   const inputText = document.getElementById("add-text").value;
   document.getElementById("add-text").value = "";
-
+  // 未完了リストに追加
   createIncompleteList(inputText);
 };
 
@@ -17,16 +17,13 @@ const deletFromIncompleteList = (target) => {
 const createIncompleteList = (text) => {
   // liタグを生成
   const li = document.createElement("li");
-
   // divタグを生成
   const div = document.createElement("div");
   div.className = "list-row";
-
   // pタグの生成
   const p = document.createElement("p");
   p.className = "task-title";
   p.innerText = text;
-
   // button(完了)生成
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
